@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fillViewport="true"
+    tools:context=".UserPersonalDetailsActivity"
+    android:background="@color/white">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:background="@color/off_white"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <!-- Top LinearLayout Progress bar  -->
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- First 30% space -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.3"
+            android:background="@drawable/primary_button" />
+
+        <!-- Remaining 70% space -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.7"/>
+    </LinearLayout>
+
+    <!-- Main heading text  -->
+    <TextView
+        android:id="@+id/headingText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:fontFamily="@font/madefortxt_semibold"
+        android:text="Your Personal Details"
+        android:textColor="@color/primary"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    <!-- Full Name TextView and Input field  -->
+    <TextView
+        android:id="@+id/fullNameText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:fontFamily="@font/madefortxt_semibold"
+        android:text="Full Name"
+        android:textColor="@color/primary"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/headingText" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" *"
+        android:textColor="#FF0000"
+        app:layout_constraintBottom_toBottomOf="@+id/fullNameText"
+        app:layout_constraintStart_toEndOf="@+id/fullNameText"
+        app:layout_constraintTop_toTopOf="@+id/fullNameText" />
+
+    <EditText
+        android:id="@+id/fullNameInput"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/personal_details_inputbox_background"
+        android:ems="10"
+        android:fontFamily="@font/madefortxt_semibold"
+        android:hint="Full Name"
+        android:inputType="text"
+        android:textColorHint="@color/primary_light"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:textColor="@color/primary"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fullNameText" />
+
+    <!-- Student ID TextView and Input field  -->
+    <TextView
+        android:id="@+id/studentIdText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:fontFamily="@font/madefortxt_semibold"
+        android:text="Student ID"
+        android:textColor="@color/primary"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fullNameInput" />
+
+    <EditText
+        android:id="@+id/studentIdInput"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/personal_details_inputbox_background"
+        android:ems="10"
+        android:fontFamily="@font/madefortxt_semibold"
+        android:hint="Student ID"
+        android:inputType="number"
+        android:textColorHint="@color/primary_light"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:textColor="@color/primary"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/studentIdText" />
+
+    <!-- DOB TextView and Input field  -->
+    <TextView
+        android:id="@+id/DOBText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:fontFamily="@font/madefortxt_semibold"
+        android:text="DOB"
+        android:textColor="@color/primary"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/studentIdInput" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" *"
+        android:textColor="#FF0000"
+        app:layout_constraintBottom_toBottomOf="@+id/DOBText"
+        app:layout_constraintStart_toEndOf="@+id/DOBText"
+        app:layout_constraintTop_toTopOf="@+id/DOBText" />
+    <LinearLayout
+        android:id="@+id/dobContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/DOBText">
+
+        <Spinner
+            android:id="@+id/spinnerDay"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:spinnerMode="dropdown"
+            android:background="@drawable/personal_details_inputbox_background" />
+
+        <Spinner
+            android:id="@+id/spinnerMonth"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/personal_details_inputbox_background" />
+
+        <Spinner
+            android:id="@+id/spinnerYear"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:background="@drawable/personal_details_inputbox_background" />
+    </LinearLayout>
+
+    <!-- Mother Tongue TextView and Input field  -->
+    <TextView
+        android:id="@+id/motherTongueText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:fontFamily="@font/madefortxt_semibold"
+        android:text="Mother Tongue"
+        android:textColor="@color/primary"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dobContainer" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" *"
+        android:textColor="#FF0000"
+        app:layout_constraintBottom_toBottomOf="@+id/motherTongueText"
+        app:layout_constraintStart_toEndOf="@+id/motherTongueText"
+        app:layout_constraintTop_toTopOf="@+id/motherTongueText" />
+    <Spinner
+        android:id="@+id/motherTongueSpinnerInput"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_weight="1"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/personal_details_inputbox_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/motherTongueText" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/dropdown_icon"
+        android:layout_marginRight="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/motherTongueSpinnerInput"
+        app:layout_constraintEnd_toEndOf="@+id/motherTongueSpinnerInput"
+        app:layout_constraintTop_toTopOf="@+id/motherTongueSpinnerInput" />
+
+    <!-- Gender TextView and Input field  -->
+    <TextView
+        android:id="@+id/genderText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:fontFamily="@font/madefortxt_semibold"
+        android:text="Gender"
+        android:textColor="@color/primary"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/motherTongueSpinnerInput" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" *"
+        android:textColor="#FF0000"
+        app:layout_constraintBottom_toBottomOf="@+id/genderText"
+        app:layout_constraintStart_toEndOf="@+id/genderText"
+        app:layout_constraintTop_toTopOf="@+id/genderText" />
+    <Spinner
+        android:id="@+id/genderSpinnerInput"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_weight="1"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/personal_details_inputbox_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/genderText" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/dropdown_icon"
+        android:layout_marginRight="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/genderSpinnerInput"
+        app:layout_constraintEnd_toEndOf="@+id/genderSpinnerInput"
+        app:layout_constraintTop_toTopOf="@+id/genderSpinnerInput" />
+
+    <!-- Phone Number TextView and Input field  -->
+    <TextView
+        android:id="@+id/phoneNumberTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:fontFamily="@font/madefortxt_semibold"
+        android:text="Phone Number"
+        android:textColor="@color/primary"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/genderSpinnerInput" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" *"
+        android:textColor="#FF0000"
+        app:layout_constraintBottom_toBottomOf="@+id/phoneNumberTxt"
+        app:layout_constraintStart_toEndOf="@+id/phoneNumberTxt"
+        app:layout_constraintTop_toTopOf="@+id/phoneNumberTxt" />
+
+    <EditText
+        android:id="@+id/phoneNumberInput"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/personal_details_inputbox_background"
+        android:ems="10"
+        android:fontFamily="@font/madefortxt_semibold"
+        android:hint="Phone Number"
+        android:inputType="number"
+        android:textColorHint="@color/primary_light"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:textColor="@color/primary"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/phoneNumberTxt" />
+
+    <!-- Email TextView and Input field  -->
+    <TextView
+        android:id="@+id/emailTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:fontFamily="@font/madefortxt_semibold"
+        android:text="Email"
+        android:textColor="@color/primary"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/phoneNumberInput" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" *"
+        android:textColor="#FF0000"
+        app:layout_constraintBottom_toBottomOf="@+id/emailTxt"
+        app:layout_constraintStart_toEndOf="@+id/emailTxt"
+        app:layout_constraintTop_toTopOf="@+id/emailTxt" />
+
+    <EditText
+        android:id="@+id/emailInput"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/personal_details_inputbox_background"
+        android:ems="10"
+        android:fontFamily="@font/madefortxt_semibold"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:textColorHint="@color/primary_light"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:textColor="@color/primary"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/emailTxt" />
+
+    <!-- LinkedIn TextView and Input field  -->
+    <TextView
+        android:id="@+id/linkedInText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:fontFamily="@font/madefortxt_semibold"
+        android:text="LinkedIn"
+        android:textColor="@color/primary"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/emailInput" />
+
+    <EditText
+        android:id="@+id/linkedInInput"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/personal_details_inputbox_background"
+        android:ems="10"
+        android:fontFamily="@font/madefortxt_semibold"
+        android:hint="Profile Link or Username"
+        android:inputType="text"
+        android:textColorHint="@color/primary_light"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:textColor="@color/primary"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linkedInText" />
+
+    <!-- Main Submit Personal Details Button  -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/personalDetailsSubmitBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:background="@drawable/primary_button"
+        android:fontFamily="@font/madefortxt_semibold"
+        android:text="Submit"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linkedInInput" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>
